@@ -53,6 +53,22 @@ header {
     margin-bottom: 10px;
 }
 
+#small-logo {
+    display: none;
+}
+
+#home-secret {
+    display: none;
+}
+
+#search-secret {
+    display: none;
+}
+
+#libreria-secret {
+    display: none;
+}
+
 .nav {
     width: 100%;
     color: var(--grey-text);
@@ -155,10 +171,18 @@ ul li a:hover {
     padding-bottom: 20px;
 }
 
-#profile {
-    width: 20px;
+#user {
+    width: 25px;
     background-color: var(--grey-text);
     border-radius: 50%;
+}
+
+#secret-user {
+    display: none;
+}
+
+#secret-icon {
+    display: none;
 }
 
 .aside img {
@@ -192,6 +216,7 @@ ul li a:hover {
 .recent, .for-me {
     margin-top: 2rem;
     margin-left: 2rem;
+    min-height: 300px;
 }
 
 .recent h2, .for-me h2 {
@@ -348,4 +373,108 @@ ul li a:hover {
     width: 50%; 
     display: flex;
     align-items: center;
+}
+
+.home-secret {
+    display: none;
+}
+
+/* MEDIA QUERY */
+
+/* TABLET */
+
+@media screen and (max-width: 1100px) {
+    .img {
+        width: calc(100% / 4);
+        padding-top: 10px;
+    }
+
+    .card {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+
+/* SMARTPHONE */
+
+@media screen and (max-width: 700px) {
+    .img {
+        width: calc(100% / 2);
+        padding-top: 10px;
+    }
+
+    .card {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .ul {
+        flex-wrap: wrap;
+        min-height: 200px;
+    }
+
+}
+
+/* MINI SMARTPHONE */
+
+@media screen and (max-width: 600px) {
+    .img {
+        width: calc(100% / 2);
+        padding-top: 10px;
+    }
+
+    .card {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .aside {
+        width: 50px;
+    }
+
+    .playlist {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .app {
+        display: none;
+    }
+
+    #home-secret, #search-secret, #libreria-secret, #small-logo {
+        display: block;
+        width: 25px;
+        margin-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    #secret-icon {
+        display: block;
+        margin-left: 15px;
+        padding-bottom: 10px;
+    }
+
+    #secret-user {
+        width: 25px;
+        background-color: var(--grey-text);
+        border-radius: 50%;
+        display: block;
+        margin-left: 10px;
+    }
+
+    .main {
+        width: calc(100% - 50px);
+    }
+
+    .header {
+        width: calc(100% - 50px);
+    }
 }
