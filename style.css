@@ -18,7 +18,7 @@ header {
 
 .header {
     height: 70px;
-    width: 80%;
+    width: calc(100% - 250px);
     background-color: #080b12;
     position: fixed;
     display: flex;
@@ -44,25 +44,16 @@ header {
 
 .container {
     display: flex;
-}
-
-.main {
-    height: 100vh;
-    width: 80%;
-    background-color: #141922;
-    overflow-y: scroll;
-    padding-top: 80px;
+    height: calc(100vh - 70px);
 }
 
 .logo {
     width: 100%;
     padding-left: 20px;
-    height: 10%;
     margin-bottom: 10px;
 }
 
 .nav {
-    height: 20%;
     width: 100%;
     color: var(--grey-text);
     font-size: 0.8rem;
@@ -87,10 +78,10 @@ header {
 }
 
 .playlist {
-    max-height: 70%;
     width: 100%;
     padding-left: 20px;
     overflow-y: scroll;
+    height: 70%;
 }
 
 ::-webkit-scrollbar {
@@ -142,18 +133,20 @@ ul li a:hover {
 }
 
 .aside {
-    min-height: calc(100% - 70px);
-    width: 20%;
+    min-height: 400px;
+    width: 250px;
     background-color: #000000;
     color: white;
 }
 
 .aside-container {
-    height: 80%;
+    height: calc(100% - 80px);
+    width: 250px;
 }
 
 .aside-container2 {
-    min-height: calc(20% - 70px);
+    height: 80px;
+    width: 250px;
 }
 
 .app {
@@ -162,13 +155,102 @@ ul li a:hover {
     padding-bottom: 20px;
 }
 
-.border {
+#profile {
+    width: 20px;
+    background-color: var(--grey-text);
+    border-radius: 50%;
+}
+
+.aside img {
+    width: 50%;
+}
+
+.main {
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: #141922;
+    overflow-y: scroll;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .main-nav ul li {
+    padding: 5px 15px;
+}
+
+.main .main-nav ul li a {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.recent, .for-me {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.recent h2, .for-me h2 {
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.img {
+    width: calc(100% / 6);
+}
+
+.img:hover {
+    opacity: 0.8;
+}
+
+.cover {
+    max-width: 200px;
+}
+
+.img > div {
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.img > h4 {
     color: var(--grey-text);
     font-size: 0.8rem;
+    padding-top: 5px;
 }
-    
-.aside img {
-    width: 60%;
+
+.for-me-music {
+    display: inline-block;
+    width: calc(100% / 6);
+}
+
+.for-me p {
+    color: var(--grey-text);
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.card2 {
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.round {
+    border-radius: 50%;
 }
 
 .footer {
@@ -178,4 +260,92 @@ ul li a:hover {
     bottom: 0;
     width: 100%;
     height: 70px;
+    display: flex;
+}
+
+.album {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.player-img > img {
+    width: 50px;
+}
+
+.song {
+    padding-left: 10px;
+}
+
+.icons {
+    padding-left: 100px;
+    color: var(--grey-text);
+}
+
+.player {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.player i {
+    color: white;
+    padding: 10px;
+}
+
+.progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border2 {
+    width: 50%;
+    height: 5px;
+    background-color:gray;
+    border-radius: 5px;
+    display: flex;
+}
+
+.lightgrey {
+    width: 20%;
+    background-color:lightgray;
+    border-radius: 5px;
+}
+
+.timer {
+    padding: 10px;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.audio {
+    width: 25%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.footer-icons {
+    padding-left: 10px;
+}
+
+.slider {
+    width: 100%; 
+    height: 5px; 
+    background:var(--grey-text); 
+    opacity: 0.7; 
+    cursor: pointer;
+    transition: opacity .2s;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.slidecontainer {
+    width: 50%; 
+    display: flex;
+    align-items: center;
 }
